@@ -79,7 +79,7 @@ public class ResourceCentreTest {
 		//Given an empty list, after adding 2 items, test if the size of the list is 2 - normal
 		ResourceCentre.addCamcorder(camcorderList, cc1);
 		ResourceCentre.addCamcorder(camcorderList, cc2);
-		assertEquals("Test that Camcorder arraylist size is 2", 2, camcorderList.size());
+		assertEquals("Test that Camcorder arraylist size is 2?", 2, camcorderList.size());
 		
 		//test if the expected output string same as the list of camcorders retrieved from the SourceCentre	
 		allCamcorder= ResourceCentre.retrieveAllCamcorder(camcorderList);
@@ -90,7 +90,7 @@ public class ResourceCentreTest {
 		
 	}
 	@Test
-	public void testRetrieveAllChrombook() {
+	public void testRetrieveAllChromebook() {
 		//fail("Not yet implemented");
 		// Test if Item list is not null but empty - boundary
 		assertNotNull("Test if there is valid Chromebook arraylist to retrieve item from", chromebookList);
@@ -103,13 +103,13 @@ public class ResourceCentreTest {
 		//Given an empty list, after adding 2 items, test if the size of the list is 2 - normal
 		ResourceCentre.addChromebook(chromebookList, cb1);
 		ResourceCentre.addChromebook(chromebookList, cb2);
-		assertEquals("Test that chromebook arraylist size is 2", 2, chromebookList.size());
+		assertEquals("Test that chromebook arraylist size is 2?", 2, chromebookList.size());
 		
 		//test if the expected output string same as the list of chromebooks retrieved from the SourceCentre	
 		allChrombook= ResourceCentre.retrieveAllChromebook(chromebookList);
 		testOutput = String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0011", "My Google Chromebook 1st","Yes", "", "Mac OS");
 		testOutput += String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0012", "SAMSUNG Chromebook 4+", "Yes", "","Win 10");	
-		assertEquals("Test that ViewAllChromebooklist", testOutput, allChrombook);
+		assertEquals("Check that ViewAllChromebooklist", testOutput, allChrombook);
 	}
 
 	@Test
